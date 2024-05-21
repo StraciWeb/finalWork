@@ -1,1 +1,1 @@
-# finalWork
+1. s-a inceput elaborarea paginei CV
