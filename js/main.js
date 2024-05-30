@@ -1,9 +1,13 @@
-import {locationSvg, phoneSvg, emailSvg, webPageSvg, circleSvg} from './svg.js'
+import {locationSvg, phoneSvg, emailSvg, webPageSvg, circleSvg, closeSvg, cameraSvg} from './svg.js'
 
 //se formeaza structura paginii
 const $container = document.createElement("div");
 //leftsidebar
 const $leftSidebar = document.createElement("div");
+const $imgWrapper = document.createElement("div");
+const $personalFoto = document.createElement("img");
+const $noFoto = document.createElement("span");
+const $hideImg = document.createElement("span");
 const $contactsWrapper = document.createElement("div");
 const $contacts = document.createElement("h3");
 const $locationWrapper = document.createElement("div");
@@ -32,7 +36,6 @@ const $universityDescr = document.createElement("p");
 
 //main content
 const $mainContent = document.createElement("div");
-const $personalFoto = document.createElement("img");
 const $title = document.createElement("h1");
 const $titleInfo = document.createElement("h2");
 const $about = document.createElement("p");
@@ -58,7 +61,10 @@ $container.classList.add("container");
 
 //clase bloc informatii stinga
 $leftSidebar.classList.add("left__sidebar");
+$imgWrapper.classList.add("left__sidebar-foto-wrapper")
 $personalFoto.classList.add("left__sidebar-img");
+$noFoto.classList.add("left__sidebar-noFoto");
+$hideImg.classList.add("left__sidebar-hide-img");
 $contacts.classList.add("left__sidebar-title");
 $locationIcon.classList.add("contacts__icon");
 $locationWrapper.classList.add("contact__wrapper");
@@ -126,6 +132,8 @@ $workExperienceWorkThreeCircle.innerHTML = circleSvg;
 //continut left sidebar
 $contacts.textContent = "Contacte";
 $personalFoto.src = "img/personal.png";
+$hideImg.innerHTML = closeSvg;
+$noFoto.innerHTML = cameraSvg;
 $locationIcon.innerHTML = locationSvg;
 $locationText.textContent = "Or. Cimislia, str. Cimislia nr. 27";
 $phoneIcon.innerHTML = phoneSvg;
@@ -142,6 +150,36 @@ $highScoolDescr.textContent = "Liceul Teoretic Mihai Viteazul, or. Cimislia, 200
 $university.textContent = "Studii Superioare";
 $universityDescr.textContent = "Academia de Studii Economice, Chisinau, 2004 - 2008";
 
+
+//ascundere / afisare butonul x pentru ascundere imagine principala
+$imgWrapper.addEventListener("mouseover", () => $hideImg.classList.add("opacity"));
+$imgWrapper.addEventListener("mouseout", () => $hideImg.classList.remove("opacity"));
+
+//actiune butonul x pentru ascundere imagine
+$hideImg.addEventListener("click", ()=> {
+    $personalFoto.remove();
+    $noFoto.style.display = "block";
+    $hideImg.remove();
+    $imgWrapper.append($noFoto);
+})
+
+//actiune pentru imagine noFoto pentru afisare imagine peronala
+$noFoto.addEventListener("click", () =>  {
+    $imgWrapper.append($personalFoto, $hideImg);
+    $noFoto.remove();
+});
+
+
+
+
+
+
+
+
+
+
+
+
 //left sidebar content
 $educationLocationUniversity.append($university, $universityDescr);
 $educationLocationHighScool.append($highScool, $highScoolDescr);
@@ -152,7 +190,8 @@ $emailWrapper.append($emailIcon, $emailText);
 $phoneWrapper.append($phoneIcon, $phoneText);
 $locationWrapper.append($locationIcon, $locationText);
 $contactsWrapper.append($contacts, $locationWrapper, $phoneWrapper, $emailWrapper, $webWrapper);
-$leftSidebar.append($personalFoto, $contactsWrapper, $educationWrapper);
+$imgWrapper.append($personalFoto, $hideImg, $noFoto);
+$leftSidebar.append($imgWrapper, $contactsWrapper, $educationWrapper);
 
 //main content
 
