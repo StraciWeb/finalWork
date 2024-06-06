@@ -23,7 +23,6 @@ img {
 
 .left__sidebar {
     width: 30%;
-    height: 100vh;
     background-color: var(--dark-color);
     padding: 50px 30px; 
     display: flex;
@@ -111,9 +110,24 @@ img {
     line-height: 200%;
 }
 
+.left__sidebar-dateTime {
+    border-left: 2px solid var(--ligth-color);
+    padding-left: 15px;
+}
+
+.left__sidebar-date {
+    margin: 0;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.left__sidebar-time {
+    margin: 0;
+    font-size: 18px;
+}
+
 .main__content {
     width: 70%;
-    height: 100vh;
     background-color: var(--ligth-color);
     padding: 50px 30px; 
     color: var(--dark-color);
