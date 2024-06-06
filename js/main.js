@@ -1,5 +1,8 @@
 import {locationSvg, phoneSvg, emailSvg, webPageSvg, circleSvg, closeSvg, cameraSvg} from './svg.js'
 
+const TODAY = new Date();
+const months = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"];
+
 //se formeaza structura paginii
 const $container = document.createElement("div");
 //leftsidebar
@@ -33,6 +36,9 @@ const $highScoolDescr = document.createElement("p");
 const $educationLocationUniversity = document.createElement("div");
 const $university = document.createElement("p");
 const $universityDescr = document.createElement("p");
+const $dateTimekWrapper = document.createElement("div");
+const $fullDate = document.createElement("p");
+const $fullTime = document.createElement("p");
 
 //main content
 const $mainContent = document.createElement("div");
@@ -86,6 +92,9 @@ $highScool.classList.add("education__location");
 $highScoolDescr.classList.add("education__descr");
 $university.classList.add("education__location");
 $universityDescr.classList.add("education__descr");
+$dateTimekWrapper.classList.add("left__sidebar-dateTime")
+$fullDate.classList.add("left__sidebar-date");
+$fullTime.classList.add("left__sidebar-time");
 
 //clase bloc informatii principal
 $mainContent.classList.add("main__content");
@@ -113,7 +122,7 @@ $workExperienceWorkThreeCircle.classList.add("work__one-circle");
 //continut main
 $title.textContent = "Traci Serghei";
 $titleInfo.textContent = "Front-End Developer";
-$about.textContent = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio pariatur facere perspiciatis deleniti error animi qui nulla cupiditate quasi totam omnis incidunt, inventore saepe, officiis ullam! Pariatur velit ipsum eligendi. Optio pariatur facere perspiciatis deleniti error animi qui nulla cupiditate quasi totam omnis incidunt, inventore saepe, officiis ullam! Pariatur velit ipsum eligendi. Optio pariatur facere perspiciatis deleniti error animi qui nulla cupiditate quasi totam omnis incidunt, inventore saepe, officiis ullam! Pariatur velit ipsum eligendi.";
+$about.textContent = "Un Front-End Developer este persoana care implementează diverse web designuri folosind diverse limbaje de programare. La orice site te-ai uita, aproape tot ce vezi ține de partea de front end development: de la așezarea în pagină, la meniurile prin care navighezi, toate acestea au fost dezvoltate de către un Front-End Developer. Un Front-End Developer va folosi în principal ca limbaje de bază HTML, CSS și JavaScript.";
 $workExperienceTitle.textContent = "Experienta in serviciu";
 $workExperienceWorkOneTitle.textContent = "Lorem, ipsum dolor sit amet consectetur";
 $workExperienceWorkOneYears.textContent = "Din 2008 pina in 2010";
@@ -169,6 +178,39 @@ $noFoto.addEventListener("click", () =>  {
     $noFoto.remove();
 });
 
+//formarea datei si ora
+
+//formarea datei
+function getFullDate(date) {
+    let monthIndex = date.getMonth();
+    let monthName = months[monthIndex];
+    let day = date.getDate();
+    let year = date.getFullYear();
+    $fullDate.textContent = day + " " + monthName + ", " + year; 
+}
+
+//formarea orei
+function getTime() {
+    let today = new Date();
+    let hour = today.getHours();
+    let minutes = today.getMinutes();
+    let seconds = today.getSeconds();
+    if(hour < 10) {
+        hour = "0" + hour;
+    }
+    if(minutes < 10) {
+        minutes = "0" + minutes;
+    } 
+    if(seconds < 10) {
+        seconds = "0" + seconds;
+    }
+    $fullTime.textContent = hour + " : " + minutes + " : " +seconds;
+}
+
+getFullDate(TODAY);
+setInterval(getTime, 1000);
+
+
 
 
 
@@ -181,6 +223,7 @@ $noFoto.addEventListener("click", () =>  {
 
 
 //left sidebar content
+$dateTimekWrapper.append($fullDate, $fullTime);
 $educationLocationUniversity.append($university, $universityDescr);
 $educationLocationHighScool.append($highScool, $highScoolDescr);
 $educationLocationScool.append($scool, $scoolDescr);
@@ -191,7 +234,7 @@ $phoneWrapper.append($phoneIcon, $phoneText);
 $locationWrapper.append($locationIcon, $locationText);
 $contactsWrapper.append($contacts, $locationWrapper, $phoneWrapper, $emailWrapper, $webWrapper);
 $imgWrapper.append($personalFoto, $hideImg, $noFoto);
-$leftSidebar.append($imgWrapper, $contactsWrapper, $educationWrapper);
+$leftSidebar.append($imgWrapper, $contactsWrapper, $educationWrapper, $dateTimekWrapper);
 
 //main content
 
