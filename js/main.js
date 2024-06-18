@@ -1,4 +1,6 @@
-import {locationSvg, phoneSvg, emailSvg, webPageSvg, circleSvg, closeSvg, cameraSvg} from './svg.js'
+import {locationSvg, phoneSvg, emailSvg, webPageSvg, circleSvg, closeSvg, cameraSvg, moreSvg} from './svg.js'
+import { $containerOperators } from './operators.js';
+import { $functionsContainer } from './functions.js';
 
 const TODAY = new Date();
 const months = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"];
@@ -52,10 +54,12 @@ const $workExperienceWorkOneTitle = document.createElement("h3");
 const $workExperienceWorkOneDescr = document.createElement("p");
 const $workExperienceWorkOneYears = document.createElement("p");
 const $workExperienceWorkOneCircle = document.createElement("span");
+const $workExperienceWorkOneBtn = document.createElement("button");
 const $workExperienceWorkTwo = document.createElement("div");
 const $workExperienceWorkTwoTitle = document.createElement("h3");
 const $workExperienceWorkTwoDescr = document.createElement("p");
 const $workExperienceWorkTwoYears = document.createElement("p");
+const $workExperienceWorkTwoBtn = document.createElement("button");
 const $workExperienceWorkTwoCircle = document.createElement("span");
 const $workExperienceWorkThree = document.createElement("div");
 const $workExperienceWorkThreeTitle = document.createElement("h3");
@@ -108,11 +112,13 @@ $workExperienceWorkOneTitle.classList.add("work__experience-title");
 $workExperienceWorkOneDescr.classList.add("work__experience-descr");
 $workExperienceWorkOneYears.classList.add("work__experience-years");
 $workExperienceWorkOneCircle.classList.add("work__one-circle");
+$workExperienceWorkOneBtn.classList.add("btn");
 $workExperienceWorkTwo.classList.add("work__experience-box");
 $workExperienceWorkTwoTitle.classList.add("work__experience-title");
 $workExperienceWorkTwoDescr.classList.add("work__experience-descr");
 $workExperienceWorkTwoYears.classList.add("work__experience-years");
 $workExperienceWorkTwoCircle.classList.add("work__one-circle");
+$workExperienceWorkTwoBtn.classList.add("btn");
 $workExperienceWorkThree.classList.add("work__experience-box");
 $workExperienceWorkThreeTitle.classList.add("work__experience-title");
 $workExperienceWorkThreeDescr.classList.add("work__experience-descr");
@@ -123,15 +129,17 @@ $workExperienceWorkThreeCircle.classList.add("work__one-circle");
 $title.textContent = "Traci Serghei";
 $titleInfo.textContent = "Front-End Developer";
 $about.textContent = "Un Front-End Developer este persoana care implementează diverse web designuri folosind diverse limbaje de programare. La orice site te-ai uita, aproape tot ce vezi ține de partea de front end development: de la așezarea în pagină, la meniurile prin care navighezi, toate acestea au fost dezvoltate de către un Front-End Developer. Un Front-End Developer va folosi în principal ca limbaje de bază HTML, CSS și JavaScript.";
-$workExperienceTitle.textContent = "Experienta in serviciu";
-$workExperienceWorkOneTitle.textContent = "Lorem, ipsum dolor sit amet consectetur";
-$workExperienceWorkOneYears.textContent = "Din 2008 pina in 2010";
-$workExperienceWorkOneDescr.textContent = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio pariatur facere perspiciatis deleniti error animi qui nulla cupiditate quasi totam omnis incidunt, inventore saepe, officiis ullam! Pariatur velit ipsum eligendi. Optio pariatur facere perspiciatis deleniti error animi qui nulla cupiditate quasi totam omnis incidunt, inventore saepe, officiis ullam! Pariatur velit ipsum eligendi. Optio pariatur facere perspiciatis deleniti error animi qui nulla cupiditate quasi totam omnis incidunt, inventore saepe, officiis ullam! Pariatur velit ipsum eligendi.";
+$workExperienceTitle.textContent = "Cunostinte in JavaScript";
+$workExperienceWorkOneTitle.textContent = "Operatori in JavaScript";
+$workExperienceWorkOneYears.textContent = "";
+$workExperienceWorkOneDescr.textContent = "Operatorii se folosesc pentru a manipula, combina si modifica datele dintr-un program sau script. Operatori aritmetici, operatori de atribuire, operatori de comparare, operatori logici (booleeni)";
 $workExperienceWorkOneCircle.innerHTML = circleSvg;
-$workExperienceWorkTwoTitle.textContent = "Lorem, ipsum dolor sit amet consectetur";
-$workExperienceWorkTwoYears.textContent = "Din 2008 pina in 2010";
-$workExperienceWorkTwoDescr.textContent = "Lorem, ipsum dolor sit amet consectetur adipisicing elit.";
+$workExperienceWorkOneBtn.textContent = "Mai mult";
+$workExperienceWorkTwoTitle.textContent = "Ce este Funcția în JavaScript?";
+$workExperienceWorkTwoYears.textContent = "";
+$workExperienceWorkTwoDescr.textContent = "Funcțiile sunt foarte importante și utile în orice limbaj de programare, deoarece fac codul reutilizabil. O funcție este un bloc de cod care va fi executat numai dacă este apelat. Dacă aveți câteva linii de cod care trebuie folosite de mai multe ori, puteți crea o funcție care să includă liniile de cod care se repetă și apoi apelați funcția oriunde doriți.";
 $workExperienceWorkTwoCircle.innerHTML = circleSvg;
+$workExperienceWorkTwoBtn.textContent = "Mai mult";
 $workExperienceWorkThreeTitle.textContent = "Lorem, ipsum dolor sit amet consectetur";
 $workExperienceWorkThreeYears.textContent = "Din 2008 pina in 2010";
 $workExperienceWorkThreeDescr.textContent = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio pariatur facere perspiciatis deleniti error animi qui nulla cupiditate quasi totam omnis incidunt, inventore saepe, officiis ullam! Pariatur velit ipsum eligendi.";
@@ -144,7 +152,7 @@ $personalFoto.src = "img/personal.png";
 $hideImg.innerHTML = closeSvg;
 $noFoto.innerHTML = cameraSvg;
 $locationIcon.innerHTML = locationSvg;
-$locationText.textContent = "Or. Cimislia, str. Cimislia nr. 27";
+$locationText.textContent = "Or. Cimislia";
 $phoneIcon.innerHTML = phoneSvg;
 $phoneText.textContent = "+373 69062838";
 $emailIcon.innerHTML = emailSvg;
@@ -210,17 +218,32 @@ function getTime() {
 getFullDate(TODAY);
 setInterval(getTime, 1000);
 
+//butonul prima tema studiata
+$workExperienceWorkOneBtn.addEventListener("click", ()=> {
+    if($containerOperators.classList.contains("display__none")){
+        $containerOperators.classList.add("display__block");
+        $containerOperators.classList.remove("display__none");
+        $workExperienceWorkOneBtn.textContent = "Ascunde";
+    }else {
+        $containerOperators.classList.add("display__none");
+        $containerOperators.classList.remove("display__block");
+        $workExperienceWorkOneBtn.textContent = "Mai mult";
+    }
+    
+})
 
-
-
-
-
-
-
-
-
-
-
+//butonul a doua tema studiata
+$workExperienceWorkTwoBtn.addEventListener("click", () => {
+    if($functionsContainer.classList.contains("display__none")){
+        $functionsContainer.classList.add("display__block");
+        $functionsContainer.classList.remove("display__none");
+        $workExperienceWorkTwoBtn.textContent = "Ascunde";
+    }else {
+        $functionsContainer.classList.add("display__none");
+        $functionsContainer.classList.remove("display__block");
+        $workExperienceWorkTwoBtn.textContent = "Mai mult";
+    }
+})
 
 //left sidebar content
 $dateTimekWrapper.append($fullDate, $fullTime);
@@ -239,8 +262,8 @@ $leftSidebar.append($imgWrapper, $contactsWrapper, $educationWrapper, $dateTimek
 //main content
 
 $workExperienceWorkThree.append($workExperienceWorkThreeTitle, $workExperienceWorkThreeYears,$workExperienceWorkThreeDescr, $workExperienceWorkThreeCircle);
-$workExperienceWorkTwo.append($workExperienceWorkTwoTitle, $workExperienceWorkTwoYears,$workExperienceWorkTwoDescr, $workExperienceWorkTwoCircle);
-$workExperienceWorkOne.append($workExperienceWorkOneTitle, $workExperienceWorkOneYears,$workExperienceWorkOneDescr, $workExperienceWorkOneCircle);
+$workExperienceWorkTwo.append($workExperienceWorkTwoTitle, $workExperienceWorkTwoYears,$workExperienceWorkTwoDescr, $workExperienceWorkTwoCircle, $workExperienceWorkTwoBtn, $functionsContainer);
+$workExperienceWorkOne.append($workExperienceWorkOneTitle, $workExperienceWorkOneYears,$workExperienceWorkOneDescr, $workExperienceWorkOneCircle, $workExperienceWorkOneBtn, $containerOperators);
 $workExperienceContainer.append($workExperienceWorkOne, $workExperienceWorkTwo, $workExperienceWorkThree);
 $mainContent.append($title, $titleInfo, $about, $workExperienceTitle, $workExperienceContainer);
 $container.append($leftSidebar, $mainContent);
