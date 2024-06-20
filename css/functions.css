@@ -32,16 +32,6 @@
     width: 500px;
 }
 
-.input {
-    padding: 10px 15px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    width: 210px;
-    margin-bottom: 15px;
-    color: #008DDA;
-}
-
 .angle__descr {
     margin: 0;
     margin-bottom: 15px;

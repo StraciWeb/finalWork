@@ -24,16 +24,36 @@ img {
 }
 
 .btn {
-    width: 120px;
-    border: none;
+    width: auto;
+    border: 2px solid var(--dark-color);
     border-radius: 10px;
-    padding: 12px 16px;
-    background-color: var(--dark-color);
+    padding: 8px;
+    background-color: var(--ligth-color);
     cursor: pointer;
     margin-bottom: 10px;
-    color: var(--ligth-color);
+    color: var(--dark-color);
     font-weight: 600;
     transition: opacity 0.3s ease-in-out;
+    font-size: 16px;
+}
+
+.btn__more {
+    border: 2px solid var(--dark-color);
+    border-radius: 10px;
+    padding: 5px 5px;
+    background-color: var(--ligth-color);
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+    font-weight: 600;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 16px;
+    background-image: url(../img/eye.svg);
+    background-repeat: no-repeat;
+    background-position: center left 10px;
+    background-size: 22px;
+    padding-left: 35px;
+    width: 125px;
 }
 
 .btn:hover {
@@ -156,6 +176,11 @@ img {
     background-color: var(--ligth-color);
     padding: 50px 30px; 
     color: var(--dark-color);
+}
+
+.main__content-header {
+    display: flex;
+    justify-content: space-between;
 }
 
 .main__content-title {
