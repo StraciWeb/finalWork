@@ -3,6 +3,7 @@ import { $containerOperators } from './operators.js';
 import { $functionsContainer } from './functions.js';
 import { $loopsContainer } from './loops.js';
 import { $formContainer } from './regForm.js';
+import { $eventsContainer } from './events.js';
 
 const TODAY = new Date();
 const months = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"];
@@ -81,6 +82,13 @@ const $workExperienceWorkFourDescr = document.createElement("p");
 const $workExperienceWorkFourYears = document.createElement("p");
 const $workExperienceWorkFourCircle = document.createElement("span");
 const $workExperienceWorkFourBtn = document.createElement("button");
+//al cincilea articol
+const $workExperienceWorkFive = document.createElement("div");
+const $workExperienceWorkFiveTitle = document.createElement("h3");
+const $workExperienceWorkFiveDescr = document.createElement("p");
+const $workExperienceWorkFiveYears = document.createElement("p");
+const $workExperienceWorkFiveCircle = document.createElement("span");
+const $workExperienceWorkFiveBtn = document.createElement("button");
 
 $container.classList.add("container");
 
@@ -304,6 +312,18 @@ $workExperienceWorkThreeBtn.addEventListener("click", () => {
         $workExperienceWorkThreeBtn.textContent = "Mai mult";
     }
 })
+//butonul al patrulea tema studiata
+$workExperienceWorkFourBtn.addEventListener("click", () => {
+    if($eventsContainer.classList.contains("display__none")){
+        $eventsContainer.classList.add("display__block");
+        $eventsContainer.classList.remove("display__none");
+        $workExperienceWorkFourBtn.textContent = "Ascunde";
+    }else {
+        $eventsContainer.classList.add("display__none");
+        $eventsContainer.classList.remove("display__block");
+        $workExperienceWorkFourBtn.textContent = "Mai mult";
+    }
+})
 
 //left sidebar content
 $dateTimekWrapper.append($fullDate, $fullTime);
@@ -322,7 +342,7 @@ $leftSidebar.append($imgWrapper, $contactsWrapper, $educationWrapper, $dateTimek
 //main content
 
 //al patrulea articol
-$workExperienceWorkFour.append($workExperienceWorkFourTitle, $workExperienceWorkFourYears,$workExperienceWorkFourDescr, $workExperienceWorkFourCircle, $workExperienceWorkFourBtn);
+$workExperienceWorkFour.append($workExperienceWorkFourTitle, $workExperienceWorkFourYears,$workExperienceWorkFourDescr, $workExperienceWorkFourCircle, $workExperienceWorkFourBtn, $eventsContainer);
 //al treilea articol
 $workExperienceWorkThree.append($workExperienceWorkThreeTitle, $workExperienceWorkThreeYears,$workExperienceWorkThreeDescr, $workExperienceWorkThreeCircle, $workExperienceWorkThreeBtn, $loopsContainer);
 //al doilea articol
