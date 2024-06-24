@@ -12,11 +12,13 @@ const getnumber = document.createElement("button");
 const getNumberList = document.createElement("ul");
 
 getNumberWrapper.classList.add("get__number");
+inputNumber.classList.add("input__loops");
 getnumber.classList.add("btn");
 getNumberList.classList.add("list");
 
 getNumberTitle.textContent = "Formarea masivului";
 getnumber.textContent = "Formeaza masivul";
+inputNumber.placeholder = "Introduceti un nr."
 
 //eliminarea elementelor ce se dubleaza
 const checkDoubleValueWrapper = document.createElement("div");
@@ -62,10 +64,12 @@ const showBtn = document.createElement("button");
 
 inputElementsWrapper.classList.add("elements__list-wrapper");
 elementsList.classList.add("special__list");
+inputElement.classList.add("input__loops");
 addElement.classList.add("btn");
 showBtn.classList.add("btn");
 
 inputElementsTitle.textContent = "Creare lista cu elemente introduse in masiv";
+inputElement.placeholder = "Introduceti un element";
 addElement.textContent = "Trimite";
 showBtn.textContent = "Afiseaza Lista";
 
