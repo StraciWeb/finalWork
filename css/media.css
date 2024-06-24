@@ -1,0 +1,90 @@
+@media (max-width: 768px) {
+    .left__sidebar {
+        width: 35%;
+        padding: 30px 20px;
+    }
+
+    .main__content {
+        width: 65%;
+        padding: 30px 20px;
+    }
+
+    .main__content-title {
+        font-size: 26px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .contact__text {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .first__check {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .second__check {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .calc__numbers__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+@media (max-width: 580px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .left__sidebar {
+        width: 100%;
+    }
+
+    .main__content {
+        width: 100%;
+    }
+
+    .main__content-title {
+        font-size: 22px;
+    }
+
+    .main__content-info {
+        font-size: 16px;
+        margin: 0;
+        margin-bottom: 15px;
+    }
+
+    .work__experience-title {
+        font-size: 18px;
+    }
+
+    .work__experience-descr {
+        line-height: 1.8;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .count__btn {
+        width: 100px;
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+}
