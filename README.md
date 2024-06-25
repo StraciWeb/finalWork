@@ -4,3 +4,4 @@
 4.s-au adauga articole in main content, butonul de inregistrare care deschide un modal cu formular pentru inregistrare.
 5. s-a adaugat articol nr. 4, fisierul media query css.
 6. s-a adaugat calculator
+7. s-a adaugat lista studentilor
