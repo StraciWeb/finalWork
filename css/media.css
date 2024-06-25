@@ -87,4 +87,8 @@
         font-size: 14px;
     }
 
+    .form__wrapper {
+        width: 90%;
+    }
+
 }
