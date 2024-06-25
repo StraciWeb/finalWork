@@ -73,7 +73,7 @@ angleBtn.addEventListener("click", getUngle);
 // //cautare tara dupa cod
 
 let getCountry = () => {
-    let countryCod = countryInput.value;
+    let countryCod = countryInput.value.toLowerCase();
     switch(countryCod) {
         case "md":  
             countryDescr.textContent = "Republica Moldova, Prefix telefon: 373";
