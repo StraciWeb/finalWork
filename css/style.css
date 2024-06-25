@@ -171,6 +171,23 @@ img {
     font-size: 18px;
 }
 
+.left__sidebar-students {
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.left__sidebar-showList {
+    width: auto;
+    padding: 8px 12px;
+    outline: 2px solid var(--ligth-color);
+    border: none;
+    outline-offset: 3px;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--dark-color);
+}
+
 .main__content {
     width: 70%;
     background-color: var(--ligth-color);
@@ -216,6 +233,7 @@ img {
 .work__experience-box {
     position: relative;
     padding-left: 30px;
+    padding-bottom: 25px;
     border-left: 2px solid var(--dark-color);
 }
 

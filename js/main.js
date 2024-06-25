@@ -16,6 +16,7 @@ const $imgWrapper = document.createElement("div");
 const $personalFoto = document.createElement("img");
 const $noFoto = document.createElement("span");
 const $hideImg = document.createElement("span");
+//contacts
 const $contactsWrapper = document.createElement("div");
 const $contacts = document.createElement("h3");
 const $locationWrapper = document.createElement("div");
@@ -30,6 +31,7 @@ const $emailText = document.createElement("p");
 const $webWrapper = document.createElement("div");
 const $webIcon = document.createElement("span");
 const $webText = document.createElement("p");
+//education
 const $educationWrapper = document.createElement("div");
 const $education = document.createElement("h3");
 const $educationLocationScool = document.createElement("div");
@@ -41,9 +43,14 @@ const $highScoolDescr = document.createElement("p");
 const $educationLocationUniversity = document.createElement("div");
 const $university = document.createElement("p");
 const $universityDescr = document.createElement("p");
+//date and time
 const $dateTimekWrapper = document.createElement("div");
 const $fullDate = document.createElement("p");
 const $fullTime = document.createElement("p");
+//lista studentilor
+const $studentsWrapper = document.createElement("div");
+const $studentsTitle = document.createElement("h3");
+const $studentsShowList = document.createElement("button");
 
 //main content
 const $mainContent = document.createElement("div");
@@ -122,6 +129,9 @@ $universityDescr.classList.add("education__descr");
 $dateTimekWrapper.classList.add("left__sidebar-dateTime")
 $fullDate.classList.add("left__sidebar-date");
 $fullTime.classList.add("left__sidebar-time");
+$studentsWrapper.classList.add("left__sidebar-students");
+$studentsTitle.classList.add("left__sidebar-title");
+$studentsShowList.classList.add("left__sidebar-showList");
 
 //clase bloc informatii principal
 $mainContent.classList.add("main__content");
@@ -217,6 +227,8 @@ $highScool.textContent = "Liceu";
 $highScoolDescr.textContent = "Liceul Teoretic Mihai Viteazul, or. Cimislia, 2001 - 2004";
 $university.textContent = "Studii Superioare";
 $universityDescr.textContent = "Academia de Studii Economice, Chisinau, 2004 - 2008";
+$studentsTitle.textContent = "Lista Studentilor";
+$studentsShowList.textContent = "Afiseaza Lista";
 
 //actiune butonul inregistreaza
 $registrBtn.addEventListener("click", () => {
@@ -242,7 +254,6 @@ $noFoto.addEventListener("click", () =>  {
 });
 
 //formarea datei si ora
-
 //formarea datei
 function getFullDate(date) {
     let monthIndex = date.getMonth();
@@ -325,7 +336,13 @@ $workExperienceWorkFourBtn.addEventListener("click", () => {
     }
 })
 
+//butonul afiseaza lista studentilor
+$studentsShowList.addEventListener("click", () => {
+    window.location.href='../content/students.html';
+})
+
 //left sidebar content
+$studentsWrapper.append($studentsTitle, $studentsShowList);
 $dateTimekWrapper.append($fullDate, $fullTime);
 $educationLocationUniversity.append($university, $universityDescr);
 $educationLocationHighScool.append($highScool, $highScoolDescr);
@@ -337,7 +354,8 @@ $phoneWrapper.append($phoneIcon, $phoneText);
 $locationWrapper.append($locationIcon, $locationText);
 $contactsWrapper.append($contacts, $locationWrapper, $phoneWrapper, $emailWrapper, $webWrapper);
 $imgWrapper.append($personalFoto, $hideImg, $noFoto);
-$leftSidebar.append($imgWrapper, $contactsWrapper, $educationWrapper, $dateTimekWrapper);
+//left sidebar
+$leftSidebar.append($imgWrapper, $contactsWrapper, $educationWrapper, $studentsWrapper, $dateTimekWrapper);
 
 //main content
 
