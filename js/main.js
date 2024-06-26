@@ -339,7 +339,7 @@ $workExperienceWorkFourBtn.addEventListener("click", () => {
 
 //butonul afiseaza lista studentilor
 $studentsShowList.addEventListener("click", () => {
-    window.location.href= `${preUrl}content/students.html`;
+    window.location.href= `/finalWork/content/students.html`;
 })
 
 //left sidebar content
