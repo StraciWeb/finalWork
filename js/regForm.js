@@ -94,7 +94,7 @@ window.addEventListener("keydown", (event) => {
     if(inputName.value === "") {
         errorName.style.display = "block";
         inputName.classList.add("error__border");
-        errorName.textContent = "Introduceci Numele, prenumele";
+        errorName.textContent = "Introduceti Numele, prenumele";
         flag = false;
     }
     else{
@@ -104,7 +104,7 @@ window.addEventListener("keydown", (event) => {
     if(inputAge.value === "") {
         errorAge.style.display = "block";
         inputAge.classList.add("error__border");
-        errorAge.textContent = "Introduceci Virsta";
+        errorAge.textContent = "Introduceti Virsta";
         flag = false;
     }
     else{
@@ -115,7 +115,7 @@ window.addEventListener("keydown", (event) => {
     if(inputEmail.value === "") {
         errorEmail.style.display = "block";
         inputEmail.classList.add("error__border");
-        errorEmail.textContent = "Introduceci email";
+        errorEmail.textContent = "Introduceti email";
         flag = false;
     }
     else {

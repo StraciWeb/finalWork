@@ -7,6 +7,7 @@ import { $eventsContainer } from './events.js';
 
 const TODAY = new Date();
 const months = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"];
+const preUrl = "finalWork/";
 
 //se formeaza structura paginii
 const $container = document.createElement("div");
@@ -338,7 +339,7 @@ $workExperienceWorkFourBtn.addEventListener("click", () => {
 
 //butonul afiseaza lista studentilor
 $studentsShowList.addEventListener("click", () => {
-    window.location.href='../content/students.html';
+    window.location.href= preUrl + '../content/students.html';
 })
 
 //left sidebar content
