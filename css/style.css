@@ -267,3 +267,43 @@ img {
     height: 16px;
 }
 
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--ligth-color);
+    padding: 15px 0;
+    border-top: 10px solid var(--dark-color);
+}
+
+.footer__container h3 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--dark-color);
+}
+
+.footer__projects-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.footer__projects-wrapper img {
+    max-width: 200px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.footer__info {
+    padding: 15px;
+    background-color: var(--dark-color);
+}
+
+.footer__info span {
+    color: var(--ligth-color);
+    margin-right: 15px;
+}
+
+
