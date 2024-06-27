@@ -7,10 +7,14 @@ import { $eventsContainer } from './events.js';
 
 const TODAY = new Date();
 const months = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"];
-const preUrl = "finalWork/";
+const CURENTYEAR = TODAY.getFullYear();
 
 //se formeaza structura paginii
-const $container = document.createElement("div");
+const $content = document.createElement("main");
+const $contentContainer = document.createElement("div");
+const $footer = document.createElement("footer");
+const $footerContainer = document.createElement("div");
+
 //leftsidebar
 const $leftSidebar = document.createElement("div");
 const $imgWrapper = document.createElement("div");
@@ -98,7 +102,31 @@ const $workExperienceWorkFiveYears = document.createElement("p");
 const $workExperienceWorkFiveCircle = document.createElement("span");
 const $workExperienceWorkFiveBtn = document.createElement("button");
 
-$container.classList.add("container");
+//foter
+const $footerTitle = document.createElement("h3");
+const $projectsWrapper = document.createElement("div");
+const $projectOneLogo = document.createElement("img");
+const $projectTwoLogo = document.createElement("img");
+const $projectThreeLogo = document.createElement("img");
+const $projectFourLogo = document.createElement("img");
+const $projectFiveLogo = document.createElement("img");
+const $footerInfo = document.createElement("div");
+const $footerYear = document.createElement("span");
+const $footerPerson = document.createElement("span");
+
+$projectOneLogo.src = "../img/galery.png";
+$projectTwoLogo.src = "../img/lagoona.png";
+$projectThreeLogo.src = "../img/lionic.png";
+$projectFourLogo.src = "../img/radio.png";
+$projectFiveLogo.src = "../img/rumtibet.png";
+
+$projectOneLogo.alt = "Blanchard Galery";
+$projectTwoLogo.alt = "Lagoona Hotels";
+$projectThreeLogo.alt = "Lionic Constructor";
+$projectFourLogo.alt = "W-wave Radio";
+$projectFiveLogo.alt = "Rumtibet Travel";
+
+$contentContainer.classList.add("container");
 
 //clase bloc informatii stinga
 $leftSidebar.classList.add("left__sidebar");
@@ -172,6 +200,12 @@ $workExperienceWorkFourYears.classList.add("work__experience-years");
 $workExperienceWorkFourCircle.classList.add("work__one-circle");
 $workExperienceWorkFourBtn.classList.add("btn__more");
 
+//clase footer
+$footerContainer.classList.add("footer__container");
+$projectsWrapper.classList.add("footer__projects-wrapper");
+$footerInfo.classList.add("footer__info");
+
+
 //continut main
 $title.textContent = "Traci Serghei";
 $registrBtn.textContent = "Inregistreaza-te";
@@ -230,6 +264,11 @@ $university.textContent = "Studii Superioare";
 $universityDescr.textContent = "Academia de Studii Economice, Chisinau, 2004 - 2008";
 $studentsTitle.textContent = "Lista Studentilor";
 $studentsShowList.textContent = "Afiseaza Lista";
+
+//continut footer
+$footerTitle.textContent = "Proiecte Realizate";
+$footerYear.textContent = CURENTYEAR;
+$footerPerson.textContent = "Traci Serghei";
 
 //actiune butonul inregistreaza
 $registrBtn.addEventListener("click", () => {
@@ -342,6 +381,23 @@ $studentsShowList.addEventListener("click", () => {
     window.location.href= `/finalWork/content/students.html`;
 })
 
+//footer projects actions
+$projectOneLogo.addEventListener("click", () => {
+    window.location.assign('https://straciweb.github.io/Blanchard/');
+})
+$projectTwoLogo.addEventListener("click", () => {
+    window.location.assign('https://straciweb.github.io/Lagoona/');
+})
+$projectThreeLogo.addEventListener("click", () => {
+    window.location.assign('https://straciweb.github.io/Lionic/');
+})
+$projectFourLogo.addEventListener("click", () => {
+    window.location.assign('https://straciweb.github.io/Radio/');
+})
+$projectFiveLogo.addEventListener("click", () => {
+    window.location.assign('https://straciweb.github.io/Rumtibet/');
+})
+
 //left sidebar content
 $studentsWrapper.append($studentsTitle, $studentsShowList);
 $dateTimekWrapper.append($fullDate, $fullTime);
@@ -372,6 +428,13 @@ $workExperienceWorkOne.append($workExperienceWorkOneTitle, $workExperienceWorkOn
 $workExperienceContainer.append($workExperienceWorkOne, $workExperienceWorkTwo, $workExperienceWorkThree, $workExperienceWorkFour);
 $mainContentHeader.append($title, $registrBtn, $formContainer);
 $mainContent.append($mainContentHeader, $titleInfo, $about, $workExperienceTitle, $workExperienceContainer);
-$container.append($leftSidebar, $mainContent);
+$contentContainer.append($leftSidebar, $mainContent);
+$content.append($contentContainer)
 
-document.body.append($container);
+//footer
+$footerInfo.append($footerYear, $footerPerson);
+$projectsWrapper.append($projectOneLogo, $projectTwoLogo, $projectThreeLogo, $projectFourLogo, $projectFiveLogo)
+$footerContainer.append($footerTitle, $projectsWrapper, $footerInfo);
+$footer.append($footerContainer);
+
+document.body.append($content, $footer);
