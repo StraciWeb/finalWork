@@ -114,11 +114,11 @@ const $footerInfo = document.createElement("div");
 const $footerYear = document.createElement("span");
 const $footerPerson = document.createElement("span");
 
-$projectOneLogo.src = "../img/galery.png";
-$projectTwoLogo.src = "../img/lagoona.png";
-$projectThreeLogo.src = "../img/lionic.png";
-$projectFourLogo.src = "../img/radio.png";
-$projectFiveLogo.src = "../img/rumtibet.png";
+$projectOneLogo.src = "img/galery.png";
+$projectTwoLogo.src = "img/lagoona.png";
+$projectThreeLogo.src = "img/lionic.png";
+$projectFourLogo.src = "img/radio.png";
+$projectFiveLogo.src = "img/rumtibet.png";
 
 $projectOneLogo.alt = "Blanchard Galery";
 $projectTwoLogo.alt = "Lagoona Hotels";
