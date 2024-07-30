@@ -1,10 +1,12 @@
-import {locationSvg, phoneSvg, emailSvg, webPageSvg, circleSvg, closeSvg, cameraSvg} from './svg.js'
+import {locationSvg, phoneSvg, emailSvg, webPageSvg, closeSvg, cameraSvg} from './svg.js'
+import { $articleWrapper } from './articles.js';
 import { $containerOperators } from './operators.js';
 import { $functionsContainer } from './functions.js';
 import { $loopsContainer } from './loops.js';
 import { $formContainer } from './regForm.js';
 import { $eventsContainer } from './events.js';
-import { $articleWrapper } from './articles.js';
+import { $selectContainer } from './sort.js';
+
 
 
 const TODAY = new Date();
@@ -297,6 +299,46 @@ let articles = Array.from(document.querySelectorAll(".article__wrapper")).revers
 
 
 //actiune butoane mai mult.
+
+//articol sortarea elementelor
+buttons[4].addEventListener("click", ()=> {
+    articles[4].append($selectContainer);
+    const filterProduct = document.querySelectorAll(".product");
+    const $navElements = document.querySelectorAll(".products__nav-item");
+    console.log($navElements);
+
+    const filterGoods = filterClass => {
+    $navElements.forEach(item => item.classList.remove("active"));
+    const active = document.querySelector(`[data-f="${filterClass}"]`);
+    if(active) active.classList.add("active");
+
+    filterProduct.forEach(item => {
+        item.classList.remove("hide");
+        if(!item.classList.contains(filterClass) && filterClass !== "all") {
+            item.classList.add("hide");
+        }
+    })
+}
+
+document.querySelector(".products__nav").addEventListener("click", event => {
+        if(event.target.tagName !== "LI") return;
+
+        let filterClass = event.target.dataset['f'];
+        filterGoods(filterClass);
+})
+
+    if($selectContainer.classList.contains("display__none")){
+        $selectContainer.classList.add("display__block");
+        $selectContainer.classList.remove("display__none");
+        buttons[4].textContent = "Ascunde";
+    }else {
+        $selectContainer.classList.add("display__none");
+        $selectContainer.classList.remove("display__block");
+        buttons[4].textContent = "Mai mult";
+    }
+})
+
+//articol operatori
 buttons[3].addEventListener("click", ()=> {
     articles[3].append($containerOperators);
     if($containerOperators.classList.contains("display__none")){
@@ -308,7 +350,6 @@ buttons[3].addEventListener("click", ()=> {
         $containerOperators.classList.remove("display__block");
         buttons[3].textContent = "Mai mult";
     }
-    console.log("este");
 })
 buttons[2].addEventListener("click", ()=> {
     articles[2].append($functionsContainer);
