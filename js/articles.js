@@ -26,8 +26,8 @@ const articlesArray = [
         articleDate: "10.06.2024",
     },
     {
-        articleTitle: "Sortare Js Nou",
-        articleDescr: "Sortarea produselor in JavaScript Nou",
+        articleTitle: "Sortare cu ajutorul JavaScript",
+        articleDescr: "Sortarea produselor in JavaScript. Sortarea nu este altceva decât aranjarea elementelor în ordinea pe care o dorim.",
         articleDate: "25.07.2024",
     }
 ]

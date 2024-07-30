@@ -241,12 +241,14 @@ img {
 .article__date {
     margin: 0;
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 700;
 }
 
 .article__descr {
     margin: 0;
     line-height: 1.5;
+    margin-bottom: 10px;
 }
 
 .work__experience-box .article__descr:not(:last-child) {
