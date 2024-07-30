@@ -7,3 +7,4 @@
 7. s-a adaugat lista studentilor
 8. s-a creat projects container, footer
 9. modificari majore in proiect
+10. s-a adaugat articol nou despre sortare produselor, alte modificari minore
