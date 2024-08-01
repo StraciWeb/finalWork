@@ -43,6 +43,14 @@
         flex-direction: column;
         gap: 15px;
     }
+    .product {
+        max-width: 30%;
+        width: 100%;
+    }
+
+    .products__nav-list {
+        gap: 10px;
+    }
 
 }
 
@@ -90,5 +98,11 @@
     .form__wrapper {
         width: 90%;
     }
+
+    .product {
+        max-width: 40%;
+        width: 100%;
+    }
+
 
 }
