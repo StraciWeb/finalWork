@@ -171,12 +171,12 @@ img {
     font-size: 18px;
 }
 
-.left__sidebar-students {
+.left__sidebar-students, .left__sidebar-cmc {
     padding-bottom: 5px;
     margin-bottom: 20px;
 }
 
-.left__sidebar-showList {
+.left__sidebar-showList, .left__sidebar-showCmc {
     width: auto;
     padding: 8px 12px;
     outline: 2px solid var(--ligth-color);

@@ -60,6 +60,10 @@ const $fullTime = document.createElement("p");
 const $studentsWrapper = document.createElement("div");
 const $studentsTitle = document.createElement("h3");
 const $studentsShowList = document.createElement("button");
+//aplicatia cmc
+const $cmcWrapper = document.createElement("div");
+const $cmcTitle = document.createElement("h3");
+const $cmcShow = document.createElement("button");
 
 //main content
 const $mainContent = document.createElement("div");
@@ -129,6 +133,9 @@ $fullTime.classList.add("left__sidebar-time");
 $studentsWrapper.classList.add("left__sidebar-students");
 $studentsTitle.classList.add("left__sidebar-title");
 $studentsShowList.classList.add("left__sidebar-showList");
+$cmcWrapper.classList.add("left__sidebar-cmc");
+$cmcTitle.classList.add("left__sidebar-title");
+$cmcShow.classList.add("left__sidebar-showCmc");
 
 //clase bloc informatii principal
 $mainContent.classList.add("main__content");
@@ -175,6 +182,8 @@ $university.textContent = "Studii Superioare";
 $universityDescr.textContent = "Academia de Studii Economice, Chisinau, 2004 - 2008";
 $studentsTitle.textContent = "Lista Studentilor";
 $studentsShowList.textContent = "Afiseaza Lista";
+$cmcTitle.textContent = "CMC";
+$cmcShow.textContent = "Deschide Aplicatie";
 
 //continut footer
 $footerTitle.textContent = "Proiecte Realizate";
@@ -242,6 +251,11 @@ $studentsShowList.addEventListener("click", () => {
     window.location.href= `/finalWork/content/students.html`;
 })
 
+//butonul deschide aplicatia CMC
+$cmcShow.addEventListener("click", () => {
+    window.location.assign('https://straciweb.github.io/cmc/');
+})
+
 //footer projects actions
 $projectOneLogo.addEventListener("click", () => {
     window.location.assign('https://straciweb.github.io/Blanchard/');
@@ -261,6 +275,7 @@ $projectFiveLogo.addEventListener("click", () => {
 
 
 //left sidebar content
+$cmcWrapper.append($cmcTitle, $cmcShow);
 $studentsWrapper.append($studentsTitle, $studentsShowList);
 $dateTimekWrapper.append($fullDate, $fullTime);
 $educationLocationUniversity.append($university, $universityDescr);
@@ -274,7 +289,7 @@ $locationWrapper.append($locationIcon, $locationText);
 $contactsWrapper.append($contacts, $locationWrapper, $phoneWrapper, $emailWrapper, $webWrapper);
 $imgWrapper.append($personalFoto, $hideImg, $noFoto);
 //left sidebar
-$leftSidebar.append($imgWrapper, $contactsWrapper, $educationWrapper, $studentsWrapper, $dateTimekWrapper);
+$leftSidebar.append($imgWrapper, $contactsWrapper, $educationWrapper, $studentsWrapper, $cmcWrapper, $dateTimekWrapper);
 
 //main content
 
