@@ -275,16 +275,9 @@ img {
 
 .footer__container h3 {
     margin: 0;
+    margin-bottom: 20px;
     font-size: 20px;
     color: var(--dark-color);
-}
-
-.footer__projects-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px;
 }
 
 .footer__projects-wrapper img {
@@ -303,4 +296,7 @@ img {
     margin-right: 15px;
 }
 
+.swiper-wrapper {
+    margin-bottom: 20px;
+}
 

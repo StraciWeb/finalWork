@@ -7,8 +7,6 @@ import { $formContainer } from './regForm.js';
 import { $eventsContainer } from './events.js';
 import { $selectContainer } from './sort.js';
 
-
-
 const TODAY = new Date();
 const months = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"];
 const CURENTYEAR = TODAY.getFullYear();
@@ -18,6 +16,9 @@ const $content = document.createElement("main");
 const $contentContainer = document.createElement("div");
 const $footer = document.createElement("footer");
 const $footerContainer = document.createElement("div");
+
+
+
 
 //leftsidebar
 const $leftSidebar = document.createElement("div");
@@ -76,12 +77,20 @@ const $articlesContainer = document.createElement("div");
 
 //foter
 const $footerTitle = document.createElement("h3");
-const $projectsWrapper = document.createElement("div");
+const swipperContainer = document.createElement("div");
+const swipperWrapper = document.createElement("div");
+const swipperEl1 = document.createElement("div");
+const swipperEl2 = document.createElement("div");
+const swipperEl3 = document.createElement("div");
+const swipperEl4 = document.createElement("div");
+const swipperEl5 = document.createElement("div");
+const swipperEl6 = document.createElement("div");
 const $projectOneLogo = document.createElement("img");
 const $projectTwoLogo = document.createElement("img");
 const $projectThreeLogo = document.createElement("img");
 const $projectFourLogo = document.createElement("img");
 const $projectFiveLogo = document.createElement("img");
+const $projectSixLogo = document.createElement("img");
 const $footerInfo = document.createElement("div");
 const $footerYear = document.createElement("span");
 const $footerPerson = document.createElement("span");
@@ -91,12 +100,14 @@ $projectTwoLogo.src = "img/lagoona.png";
 $projectThreeLogo.src = "img/lionic.png";
 $projectFourLogo.src = "img/radio.png";
 $projectFiveLogo.src = "img/rumtibet.png";
+$projectSixLogo.src = "img/spital.png";
 
 $projectOneLogo.alt = "Blanchard Galery";
 $projectTwoLogo.alt = "Lagoona Hotels";
 $projectThreeLogo.alt = "Lionic Constructor";
 $projectFourLogo.alt = "W-wave Radio";
 $projectFiveLogo.alt = "Rumtibet Travel";
+$projectSixLogo.alt = "Spitalul raional Cimislia"
 
 $contentContainer.classList.add("container");
 
@@ -149,8 +160,16 @@ $articlesContainer.classList.add("experience__container")
 
 //clase footer
 $footerContainer.classList.add("footer__container");
-$projectsWrapper.classList.add("footer__projects-wrapper");
+swipperContainer.classList.add("swiper", "promo__swiper");
+swipperWrapper.classList.add("swiper-wrapper", "footer__projects-wrapper");
 $footerInfo.classList.add("footer__info");
+
+swipperEl1.classList.add("swiper-slide")
+swipperEl2.classList.add("swiper-slide")
+swipperEl3.classList.add("swiper-slide")
+swipperEl4.classList.add("swiper-slide")
+swipperEl5.classList.add("swiper-slide")
+swipperEl6.classList.add("swiper-slide")
 
 
 //continut main
@@ -272,6 +291,9 @@ $projectFourLogo.addEventListener("click", () => {
 $projectFiveLogo.addEventListener("click", () => {
     window.location.assign('https://straciweb.github.io/Rumtibet/');
 })
+$projectSixLogo.addEventListener("click", () => {
+    window.location.assign('http://srcimislia.md/');
+})
 
 
 //left sidebar content
@@ -300,9 +322,19 @@ $contentContainer.append($leftSidebar, $mainContent);
 $content.append($contentContainer)
 
 //footer
+swipperEl1.append($projectOneLogo);
+swipperEl2.append($projectTwoLogo);
+swipperEl3.append($projectThreeLogo);
+swipperEl4.append($projectFourLogo);
+swipperEl5.append($projectFiveLogo);
+swipperEl6.append($projectSixLogo);
+
+swipperWrapper.append(swipperEl1, swipperEl2, swipperEl3, swipperEl4, swipperEl5, swipperEl6);
+swipperContainer.append(swipperWrapper);
+
+
 $footerInfo.append($footerYear, $footerPerson);
-$projectsWrapper.append($projectOneLogo, $projectTwoLogo, $projectThreeLogo, $projectFourLogo, $projectFiveLogo)
-$footerContainer.append($footerTitle, $projectsWrapper, $footerInfo);
+$footerContainer.append($footerTitle, swipperContainer, $footerInfo);
 $footer.append($footerContainer);
 
 document.body.append($content, $footer);
@@ -403,3 +435,37 @@ buttons[0].addEventListener("click", () => {
         buttons[0].textContent = "Mai mult";
     }
 })
+
+// slider
+
+  let swiper = new Swiper(".promo__swiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    //   1200: {
+    //     slidesPerView: 5,
+    //     spaceBetween: 20,
+    //   },
+    },
+  });
+  

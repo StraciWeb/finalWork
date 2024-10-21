@@ -8,3 +8,4 @@
 8. s-a creat projects container, footer
 9. modificari majore in proiect
 10. s-a adaugat articol nou despre sortare produselor, alte modificari minore
+11. s-a adugat la lucrari efectuate sr cimislia, aplicatia cmc
