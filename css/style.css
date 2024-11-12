@@ -23,6 +23,45 @@ img {
     display: block;
 }
 
+.show__image {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    display: none;
+  
+}
+.show__image div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.show__image.open {
+    display: block;
+}
+
+.full__img {
+    max-width: 50%;
+}
+
+.close__img {
+    position: absolute;
+    top: -25px;
+    right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close__img svg {
+    width: 30px;
+    fill: var(--dark-color);
+}
+
 .btn {
     width: auto;
     border: 2px solid var(--dark-color);
@@ -283,6 +322,25 @@ img {
 .footer__projects-wrapper img {
     max-width: 200px;
     border-radius: 15px;
+    cursor: pointer;
+}
+
+.footer__courses {
+    display: flex;
+    flex-direction: column;
+    border-top: 10px solid var(--dark-color);
+    padding: 15px 0;
+}
+
+.degree__img-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer__courses img {
+    max-width: 200px;
+    border-radius: 10px;
     cursor: pointer;
 }
 

@@ -17,6 +17,11 @@ const $contentContainer = document.createElement("div");
 const $footer = document.createElement("footer");
 const $footerContainer = document.createElement("div");
 
+//container pentru vizualizarea imaginilor
+const $showImage = document.createElement("div");
+const $bigImgWrapper = document.createElement("div");
+const $bigImg = document.createElement("img");
+const $closeImg = document.createElement("button");
 
 
 
@@ -85,12 +90,24 @@ const swipperEl3 = document.createElement("div");
 const swipperEl4 = document.createElement("div");
 const swipperEl5 = document.createElement("div");
 const swipperEl6 = document.createElement("div");
+
+//proiecte realizate
 const $projectOneLogo = document.createElement("img");
 const $projectTwoLogo = document.createElement("img");
 const $projectThreeLogo = document.createElement("img");
 const $projectFourLogo = document.createElement("img");
 const $projectFiveLogo = document.createElement("img");
 const $projectSixLogo = document.createElement("img");
+
+//cursurie efectuate
+const $coursesDegree = document.createElement("div");
+const $coursesDegreeTitle = document.createElement("h3");
+const $courseDegreeImgWrapper = document.createElement("div");
+const $coursesDegreeOne = document.createElement("img");
+const $coursesDegreeTwo = document.createElement("img");
+const $coursesDegreeThree = document.createElement("img");
+
+//footer info
 const $footerInfo = document.createElement("div");
 const $footerYear = document.createElement("span");
 const $footerPerson = document.createElement("span");
@@ -107,7 +124,18 @@ $projectTwoLogo.alt = "Lagoona Hotels";
 $projectThreeLogo.alt = "Lionic Constructor";
 $projectFourLogo.alt = "W-wave Radio";
 $projectFiveLogo.alt = "Rumtibet Travel";
-$projectSixLogo.alt = "Spitalul raional Cimislia"
+$projectSixLogo.alt = "Spitalul raional Cimislia";
+
+$coursesDegreeTitle.textContent = "Cursuri finisate";
+$closeImg.innerHTML = closeSvg;
+
+$coursesDegreeOne.src = "img/degree/frontend.jpg";
+$coursesDegreeTwo.src = "img/degree/typescript.jpg";
+$coursesDegreeThree.src = "img/degree/NodeJS.jpg";
+
+$coursesDegreeOne.alt = "Frontend";
+$coursesDegreeTwo.alt = "Type Script";
+$coursesDegreeThree.alt = "NodeJS";
 
 $contentContainer.classList.add("container");
 
@@ -150,6 +178,8 @@ $cmcShow.classList.add("left__sidebar-showCmc");
 
 //clase bloc informatii principal
 $mainContent.classList.add("main__content");
+$showImage.classList.add("show__image");
+$bigImg.classList.add("full__img");
 $mainContentHeader.classList.add("main__content-header");
 $registrBtn.classList.add("btn");
 $title.classList.add("main__content-title");
@@ -162,6 +192,8 @@ $articlesContainer.classList.add("experience__container")
 $footerContainer.classList.add("footer__container");
 swipperContainer.classList.add("swiper", "promo__swiper");
 swipperWrapper.classList.add("swiper-wrapper", "footer__projects-wrapper");
+$coursesDegree.classList.add("footer__courses");
+$courseDegreeImgWrapper.classList.add("degree__img-wrapper");
 $footerInfo.classList.add("footer__info");
 
 swipperEl1.classList.add("swiper-slide")
@@ -170,6 +202,11 @@ swipperEl3.classList.add("swiper-slide")
 swipperEl4.classList.add("swiper-slide")
 swipperEl5.classList.add("swiper-slide")
 swipperEl6.classList.add("swiper-slide")
+
+$coursesDegreeOne.classList.add("course__one", "course");
+$coursesDegreeTwo.classList.add("course__two", "course");
+$coursesDegreeThree.classList.add("course__three", "course");
+$closeImg.classList.add("close__img");
 
 
 //continut main
@@ -317,6 +354,8 @@ $leftSidebar.append($imgWrapper, $contactsWrapper, $educationWrapper, $studentsW
 
 $articlesContainer.prepend($articleWrapper);
 $mainContentHeader.append($title, $registrBtn, $formContainer);
+$bigImgWrapper.append($bigImg, $closeImg);
+$showImage.append($bigImgWrapper);
 $mainContent.append($mainContentHeader, $titleInfo, $about, $articlesContainer);
 $contentContainer.append($leftSidebar, $mainContent);
 $content.append($contentContainer)
@@ -332,12 +371,15 @@ swipperEl6.append($projectSixLogo);
 swipperWrapper.append(swipperEl1, swipperEl2, swipperEl3, swipperEl4, swipperEl5, swipperEl6);
 swipperContainer.append(swipperWrapper);
 
+$courseDegreeImgWrapper.append($coursesDegreeOne, $coursesDegreeTwo, $coursesDegreeThree)
+$coursesDegree.append($coursesDegreeTitle, $courseDegreeImgWrapper);
+
 
 $footerInfo.append($footerYear, $footerPerson);
-$footerContainer.append($footerTitle, swipperContainer, $footerInfo);
+$footerContainer.append($footerTitle, swipperContainer, $coursesDegree, $footerInfo);
 $footer.append($footerContainer);
 
-document.body.append($content, $footer);
+document.body.append($content, $footer, $showImage);
 
 //extragere butoane
 let buttons = Array.from(document.querySelectorAll('.btn__more')).reverse();
@@ -468,4 +510,32 @@ buttons[0].addEventListener("click", () => {
     //   },
     },
   });
+
+// imagine cursuri efectuate 100%
+ 
+function fullImage (src) {
+    $bigImg.src = src;
+    $showImage.classList.add("open");
+}
+
+document.querySelectorAll('.course').forEach((item) => {
+    console.log(item.getAttribute('src'))
+    item.addEventListener("click", () => {
+        fullImage(item.getAttribute('src'))
+    })
+})
+
+$closeImg.addEventListener("click", () => {
+    $showImage.classList.remove("open");
+})
+window.addEventListener("keydown", (e) => {
+    if (e.key === 'Escape') $showImage.classList.remove("open");
+})
+
+$showImage.addEventListener("click", () => {
+    $showImage.classList.remove("open");
+})
+
+//finisare imagine 100% pentru cursuri finisate
+
   
