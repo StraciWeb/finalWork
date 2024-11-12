@@ -126,6 +126,7 @@ img {
     width: 180px;
     margin: 0 auto;
     margin-bottom: 50px;
+    border-radius: 20%;
 }
 
 .left__sidebar-hide-img {

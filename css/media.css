@@ -52,6 +52,13 @@
         gap: 10px;
     }
 
+    .degree__img-wrapper {
+        flex-wrap: wrap;
+    }
+    
+    .full__img {
+        max-width: 90%;
+    }
 }
 
 @media (max-width: 580px) {
