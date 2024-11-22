@@ -45,7 +45,7 @@ const $emailIcon = document.createElement("span");
 const $emailText = document.createElement("p");
 const $webWrapper = document.createElement("div");
 const $webIcon = document.createElement("span");
-const $webText = document.createElement("p");
+const $webText = document.createElement("a");
 //education
 const $educationWrapper = document.createElement("div");
 const $education = document.createElement("h3");
@@ -228,7 +228,8 @@ $phoneText.textContent = "+373 69062838";
 $emailIcon.innerHTML = emailSvg;
 $emailText.textContent = "traciserii@gmail.com";
 $webIcon.innerHTML = webPageSvg;
-$webText.textContent = "www.personalpage.md";
+$webText.href = "https://straciweb.github.io/finalWork/";
+$webText.textContent = "Personal Page";
 $education.textContent = "Educatie";
 $scool.textContent = "Scoala medie";
 $scoolDescr.textContent = "Nr. 1, Ion Creanga, or. Cimislia, 1999 - 2001";
@@ -309,7 +310,7 @@ $studentsShowList.addEventListener("click", () => {
 
 //butonul deschide aplicatia CMC
 $cmcShow.addEventListener("click", () => {
-    window.location.assign('https://straciweb.github.io/cmc/');
+    window.location.assign('https://cmc-test.srcimislia.md/app');
 })
 
 //footer projects actions
@@ -368,7 +369,7 @@ swipperEl4.append($projectFourLogo);
 swipperEl5.append($projectFiveLogo);
 swipperEl6.append($projectSixLogo);
 
-swipperWrapper.append(swipperEl1, swipperEl2, swipperEl3, swipperEl4, swipperEl5, swipperEl6);
+swipperWrapper.append(swipperEl6, swipperEl2, swipperEl3, swipperEl4, swipperEl5, swipperEl1);
 swipperContainer.append(swipperWrapper);
 
 $courseDegreeImgWrapper.append($coursesDegreeOne, $coursesDegreeTwo, $coursesDegreeThree)
