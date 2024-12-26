@@ -106,6 +106,7 @@ const $courseDegreeImgWrapper = document.createElement("div");
 const $coursesDegreeOne = document.createElement("img");
 const $coursesDegreeTwo = document.createElement("img");
 const $coursesDegreeThree = document.createElement("img");
+const $coursesDegreeFour = document.createElement("img");
 
 //footer info
 const $footerInfo = document.createElement("div");
@@ -132,10 +133,12 @@ $closeImg.innerHTML = closeSvg;
 $coursesDegreeOne.src = "img/degree/frontend.jpg";
 $coursesDegreeTwo.src = "img/degree/typescript.jpg";
 $coursesDegreeThree.src = "img/degree/NodeJS.jpg";
+$coursesDegreeFour.src = "img/degree/react.jpg";
 
 $coursesDegreeOne.alt = "Frontend";
 $coursesDegreeTwo.alt = "Type Script";
 $coursesDegreeThree.alt = "NodeJS";
+$coursesDegreeFour.alt = "React";
 
 $contentContainer.classList.add("container");
 
@@ -206,6 +209,7 @@ swipperEl6.classList.add("swiper-slide")
 $coursesDegreeOne.classList.add("course__one", "course");
 $coursesDegreeTwo.classList.add("course__two", "course");
 $coursesDegreeThree.classList.add("course__three", "course");
+$coursesDegreeFour.classList.add("course__four", "course");
 $closeImg.classList.add("close__img");
 
 
@@ -372,7 +376,7 @@ swipperEl6.append($projectSixLogo);
 swipperWrapper.append(swipperEl6, swipperEl2, swipperEl3, swipperEl4, swipperEl5, swipperEl1);
 swipperContainer.append(swipperWrapper);
 
-$courseDegreeImgWrapper.append($coursesDegreeOne, $coursesDegreeTwo, $coursesDegreeThree)
+$courseDegreeImgWrapper.append($coursesDegreeOne, $coursesDegreeTwo, $coursesDegreeThree, $coursesDegreeFour)
 $coursesDegree.append($coursesDegreeTitle, $courseDegreeImgWrapper);
 
 
