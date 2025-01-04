@@ -90,6 +90,7 @@ const swipperEl3 = document.createElement("div");
 const swipperEl4 = document.createElement("div");
 const swipperEl5 = document.createElement("div");
 const swipperEl6 = document.createElement("div");
+const swipperEl7 = document.createElement("div");
 
 //proiecte realizate
 const $projectOneLogo = document.createElement("img");
@@ -98,6 +99,7 @@ const $projectThreeLogo = document.createElement("img");
 const $projectFourLogo = document.createElement("img");
 const $projectFiveLogo = document.createElement("img");
 const $projectSixLogo = document.createElement("img");
+const $projectSevenLogo = document.createElement("img");
 
 //cursurie efectuate
 const $coursesDegree = document.createElement("div");
@@ -119,6 +121,7 @@ $projectThreeLogo.src = "img/lionic.png";
 $projectFourLogo.src = "img/radio.png";
 $projectFiveLogo.src = "img/rumtibet.png";
 $projectSixLogo.src = "img/spital.png";
+$projectSevenLogo.src = "img/burger.png";
 
 $projectOneLogo.alt = "Blanchard Galery";
 $projectTwoLogo.alt = "Lagoona Hotels";
@@ -126,6 +129,7 @@ $projectThreeLogo.alt = "Lionic Constructor";
 $projectFourLogo.alt = "W-wave Radio";
 $projectFiveLogo.alt = "Rumtibet Travel";
 $projectSixLogo.alt = "Spitalul raional Cimislia";
+$projectSevenLogo.alt = "Burger Shop";
 
 $coursesDegreeTitle.textContent = "Cursuri finisate";
 $closeImg.innerHTML = closeSvg;
@@ -205,6 +209,7 @@ swipperEl3.classList.add("swiper-slide")
 swipperEl4.classList.add("swiper-slide")
 swipperEl5.classList.add("swiper-slide")
 swipperEl6.classList.add("swiper-slide")
+swipperEl7.classList.add("swiper-slide")
 
 $coursesDegreeOne.classList.add("course__one", "course");
 $coursesDegreeTwo.classList.add("course__two", "course");
@@ -336,6 +341,9 @@ $projectFiveLogo.addEventListener("click", () => {
 $projectSixLogo.addEventListener("click", () => {
     window.location.assign('http://srcimislia.md/');
 })
+$projectSevenLogo.addEventListener("click", () => {
+    window.location.assign('https://straciweb.github.io/burger/');
+})
 
 
 //left sidebar content
@@ -372,8 +380,9 @@ swipperEl3.append($projectThreeLogo);
 swipperEl4.append($projectFourLogo);
 swipperEl5.append($projectFiveLogo);
 swipperEl6.append($projectSixLogo);
+swipperEl7.append($projectSevenLogo);
 
-swipperWrapper.append(swipperEl6, swipperEl2, swipperEl3, swipperEl4, swipperEl5, swipperEl1);
+swipperWrapper.append(swipperEl7, swipperEl6, swipperEl2, swipperEl3, swipperEl4, swipperEl5, swipperEl1);
 swipperContainer.append(swipperWrapper);
 
 $courseDegreeImgWrapper.append($coursesDegreeOne, $coursesDegreeTwo, $coursesDegreeThree, $coursesDegreeFour)
