@@ -29,6 +29,11 @@ const articlesArray = [
         articleTitle: "Sortare cu ajutorul JavaScript",
         articleDescr: "Sortarea produselor in JavaScript. Sortarea nu este altceva decât aranjarea elementelor în ordinea pe care o dorim.",
         articleDate: "25.07.2024",
+    },
+    {
+        articleTitle: "Aplicatie tip 'Store', realizat cu ajutorul biblioteca React.js",
+        articleDescr: "Afisarea produselor pe prima pagina extrase direct din API 'https://fakestoreapi.com/products', cu posibilitate de filtrare a produselor, adaugare produs in cosul de cumparaturi, modificare cantitate produse in cos sau eliminarea produselor din cos.",
+        articleDate: "29.01.2025",
     }
 ]
 

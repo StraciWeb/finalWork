@@ -404,6 +404,9 @@ let articles = Array.from(document.querySelectorAll(".article__wrapper")).revers
 //actiune butoane mai mult.
 
 //articol sortarea elementelor
+buttons[5].addEventListener("click", () => {
+    window.location.assign('https://straciweb.github.io/store/');
+}) 
 buttons[4].addEventListener("click", ()=> {
     articles[4].append($selectContainer);
     const filterProduct = document.querySelectorAll(".product");
