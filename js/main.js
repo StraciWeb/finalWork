@@ -405,7 +405,7 @@ let articles = Array.from(document.querySelectorAll(".article__wrapper")).revers
 
 //articol sortarea elementelor
 buttons[5].addEventListener("click", () => {
-    window.location.assign('https://straciweb.github.io/');
+    window.location.assign('https://straciweb.github.io/store/');
 }) 
 buttons[4].addEventListener("click", ()=> {
     articles[4].append($selectContainer);
