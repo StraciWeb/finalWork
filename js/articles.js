@@ -34,6 +34,11 @@ const articlesArray = [
         articleTitle: "Aplicatie tip 'Store', realizat cu ajutorul biblioteca React.js",
         articleDescr: "Afisarea produselor pe prima pagina extrase direct din API 'https://fakestoreapi.com/products', cu posibilitate de filtrare a produselor, adaugare produs in cosul de cumparaturi, modificare cantitate produse in cos sau eliminarea produselor din cos.",
         articleDate: "29.01.2025",
+    },
+    {
+        articleTitle: "Aplicatie tip 'Store v.02', realizat cu ajutorul biblioteca React.js",
+        articleDescr: "Proiect realizat cu ajutorul biblioteca React.js, inclusiv Tehnologia Redux, Redux Toolkit",
+        articleDate: "04.03.2025",
     }
 ]
 

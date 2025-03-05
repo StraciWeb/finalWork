@@ -11,3 +11,4 @@
 11. s-a adugat la lucrari efectuate sr cimislia, aplicatia cmc
 12. s-a adaugat modul cursuri efectuate cu imagini, foto personal
 13. s-a adaugat proiect realizat cu React Js 'Store'.
+14. s-a adaugat proiect realizat cu React Js 'Store v.02'.
