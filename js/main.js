@@ -409,7 +409,7 @@ buttons[6].addEventListener("click", () => {
 })
 //articol store v.01
 buttons[5].addEventListener("click", () => {
-    window.location.assign('https://straciweb.github.io/store/');
+    window.location.assign('https://straciweb.github.io/shopStore/');
 })
 //articol sortarea elementelor
 buttons[4].addEventListener("click", ()=> {
