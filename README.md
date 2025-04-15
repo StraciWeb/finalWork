@@ -12,3 +12,5 @@
 12. s-a adaugat modul cursuri efectuate cu imagini, foto personal
 13. s-a adaugat proiect realizat cu React Js 'Store'.
 14. s-a adaugat proiect realizat cu React Js 'Store v.02'.
+15. s-a adaugat proiect cu Node JS, CMC
+16. s-a adaugat proiect realizat cu Express 'Store v.03'.

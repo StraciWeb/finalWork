@@ -39,6 +39,16 @@ const articlesArray = [
         articleTitle: "Aplicatie tip 'Store v.02', realizat cu ajutorul biblioteca React.js",
         articleDescr: "Proiect realizat cu ajutorul biblioteca React.js, inclusiv Tehnologia Redux, Redux Toolkit",
         articleDate: "04.03.2025",
+    },
+    {
+        articleTitle: "Aplicatie CMC realizata pentru inregistrarea si evidenta persoanelor la anumite investigatii in institutii republicane",
+        articleDescr: "Proiect realizat cu ajutorul NodeJs, autentificare, cu trasnmiterea informatiei in baza de date si generarea raporatelor",
+        articleDate: "30.03.2025",
+    },
+    {
+        articleTitle: "Aplicatie tip 'Store v.03', realizat cu ajutorul framework Express, Bootstrap, MySQL, phpMyAdmin",
+        articleDescr: "Proiect realizat cu ajutorul framework Express, Bootstrap. Se extrage informatie despre produs din baza de date, salvare comanda in baza de date cu ajutorul SQL query",
+        articleDate: "15.04.2025",
     }
 ]
 

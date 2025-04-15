@@ -403,7 +403,15 @@ let articles = Array.from(document.querySelectorAll(".article__wrapper")).revers
 
 //actiune butoane mai mult.
 
-//articol store v.01
+//articol store v.03
+buttons[8].addEventListener("click", () => {
+    window.location.assign('https://express-store.traciserghei.info.md/');
+})
+//articol store v.02
+buttons[7].addEventListener("click", () => {
+    window.location.assign('https://cmc-test.srcimislia.md/app');
+})
+//articol store v.02
 buttons[6].addEventListener("click", () => {
     window.location.assign('https://straciweb.github.io/topTechStore/');
 })
