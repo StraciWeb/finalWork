@@ -3,7 +3,7 @@ import { $articleWrapper } from './articles.js';
 import { $containerOperators } from './operators.js';
 import { $functionsContainer } from './functions.js';
 import { $loopsContainer } from './loops.js';
-import { $formContainer } from './regForm.js';
+import { $formContainer } from './regform.js';
 import { $eventsContainer } from './events.js';
 import { $selectContainer } from './sort.js';
 
@@ -136,7 +136,7 @@ $closeImg.innerHTML = closeSvg;
 
 $coursesDegreeOne.src = "img/degree/frontend.jpg";
 $coursesDegreeTwo.src = "img/degree/typescript.jpg";
-$coursesDegreeThree.src = "img/degree/NodeJS.jpg";
+$coursesDegreeThree.src = "img/degree/nodejs.jpg";
 $coursesDegreeFour.src = "img/degree/react.jpg";
 
 $coursesDegreeOne.alt = "Frontend";
@@ -237,7 +237,7 @@ $phoneText.textContent = "+373 69062838";
 $emailIcon.innerHTML = emailSvg;
 $emailText.textContent = "traciserii@gmail.com";
 $webIcon.innerHTML = webPageSvg;
-$webText.href = "https://straciweb.github.io/finalWork/";
+$webText.href = "https://traciserghei.info.md/";
 $webText.textContent = "Personal Page";
 $education.textContent = "Educatie";
 $scool.textContent = "Scoala medie";
