@@ -49,6 +49,11 @@ const articlesArray = [
         articleTitle: "Aplicatie tip 'Store v.03', realizat cu ajutorul framework Express, Bootstrap, MySQL, phpMyAdmin",
         articleDescr: "Proiect realizat cu ajutorul framework Express, Bootstrap. Se extrage informatie despre produs din baza de date, salvare comanda in baza de date cu ajutorul SQL query",
         articleDate: "15.04.2025",
+    },
+    {
+        articleTitle: "Baza de date pe internet, cu informații despre filme cu pagini detaliate și structurate despre fiecare, realizat cu ajutorul framework Express, React, Tailwind, MySQL, phpMyAdmin",
+        articleDescr: "Proiect realizat cu ajutorul framework Express, React, Tailwind. Vizualizarea informatiei ce se extrage din Baza de date despre fiecare film cu sortare dupa categorie, gen, pagina de login cu verificare date de logare inregistrare in baza de date cu acces la pagina de adugare film nou",
+        articleDate: "05.05.2025",
     }
 ]
 

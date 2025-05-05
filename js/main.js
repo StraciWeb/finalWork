@@ -403,6 +403,10 @@ let articles = Array.from(document.querySelectorAll(".article__wrapper")).revers
 
 //actiune butoane mai mult.
 
+//articol baza de date filme
+buttons[9].addEventListener("click", () => {
+    window.location.assign('https://fetlix.traciserghei.info.md/');
+})
 //articol store v.03
 buttons[8].addEventListener("click", () => {
     window.location.assign('https://express-store.traciserghei.info.md/');

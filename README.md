@@ -14,3 +14,4 @@
 14. s-a adaugat proiect realizat cu React Js 'Store v.02'.
 15. s-a adaugat proiect cu Node JS, CMC
 16. s-a adaugat proiect realizat cu Express 'Store v.03'.
+17. s-a adaugat proiec despre filme ce se pastreaza in baza de date
