@@ -59,6 +59,11 @@ const articlesArray = [
         articleTitle: "SIA AMS SR Cimislia",
         articleDescr: "Sistem informational automatizat elaborat pentru gestionarea pacientilor cu adresare la institutia medicala pentru internare in stationar pina la externare, realizat cu ajutorul framework Express, React, Tailwind, MySQL, phpMyAdmin. Proiect cu extindere in continuare.",
         articleDate: "18.07.2025",
+    },
+    {
+        articleTitle: "Rent Car",
+        articleDescr: "Sistem informational automatizat elaborat pentru gestionarea automobilelor pentru chirie, vizualizare auto disponibile cu posibilitate de selecta auto cu selectare perioadei de chirie, panou control pentru admin unde se duce evidenta autombilelor cu posibilitate de adugare, modificare auto, gestionarea rezervarilor efectuate, vizualizarea mesajelor trimise de persoane, realizat cu ajutorul framework Express, React, Tailwind, MySQL, phpMyAdmin.",
+        articleDate: "17.09.2025",
     }
 ]
 

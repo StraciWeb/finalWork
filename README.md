@@ -16,3 +16,4 @@
 16. s-a adaugat proiect realizat cu Express 'Store v.03'.
 17. s-a adaugat proiec despre filme ce se pastreaza in baza de date
 18. s-a adaugat proiect despre evidenta si gestionarea paciantilor adresati intro institutie medicala
+19. s-a adaugat proiect rent car

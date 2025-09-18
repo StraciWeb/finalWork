@@ -403,7 +403,11 @@ let articles = Array.from(document.querySelectorAll(".article__wrapper")).revers
 
 //actiune butoane mai mult.
 
-//articol baza de date filme
+//articol rent car
+buttons[11].addEventListener("click", () => {
+    window.location.assign('https://rentcar.traciserghei.info.md/');
+})
+//articol sia ams
 buttons[10].addEventListener("click", () => {
     window.location.assign('https://siaams.traciserghei.info.md/');
 })
